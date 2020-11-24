@@ -1,0 +1,83 @@
+POST:
+
+//User registration
+http://10.6.215.55:4000/api/register
+{
+"username":"preetam",
+"mailid":"preetam@admin.com",
+"role":"admin",
+"password":"pass123"
+}
+
+//Login
+http://10.6.215.55:4000/api/login
+{
+"email":"manoj@admin.com",
+"password":"pass123"
+}
+
+
+//Add organistaion
+http://10.6.215.55:4000/api/addOrganisation
+{
+"orgName":"ITC",
+"orgType":"Service based",
+"orgLocation":"ROW"
+}
+
+//add profile
+http://10.6.215.55:4000/api/addProfile
+{
+"profile":"User",
+"profileOrg":"ITC",
+"profileDescription":"organisation description"
+}
+
+//add user
+http://10.6.215.55:4000/api/addUser
+{
+"userName":"manoj",
+"mailId":"manoj@admin.com",
+"role":"admin"
+}
+
+//save userid, toolsid, organisation id
+http://10.6.215.55:4000/api/mapUserToolOrg
+{
+    "userId":0,
+    "toolId":'1,2',
+    "orgId":0
+}
+
+
+GET:
+
+//Get all organisations
+http://10.6.215.55:4000/api/getAllOrganisations
+
+//Get all profiles
+http://10.6.215.55:4000/api/getAllProfiles
+
+//Get all users
+http://10.6.215.55:4000/api/getAllUsers
+
+//Get all organisation names
+http://10.6.215.55:4000/api/getAllOrganisationNames
+
+//Get all profile names
+http://10.6.215.55:4000/api/getAllProfileNames
+
+//Get organisation by id
+http://10.6.215.55:4000/api/getOrgById
+{
+    "orgId": 1
+}
+
+//Get all tools
+http://10.6.215.55:4000/api/getAllTools
+
+//Get userid, toolsid by orgnisation id
+http://10.6.215.55:4000/api/getMapedUserToolOrg
+{
+    "orgId": 1
+}
